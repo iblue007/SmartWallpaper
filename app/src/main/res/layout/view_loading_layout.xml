@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progress_small_title"-->
+    <!--android:layout_width="64dp"-->
+    <!--android:layout_height="64dp"-->
+    <!--android:background="@drawable/ic_loading_bg"-->
+    <!--android:indeterminateBehavior="repeat"-->
+    <!--android:indeterminateDrawable="@drawable/loading_ani"-->
+    <!--android:indeterminateOnly="true" />-->
+
+    <com.xxm.smartwallpaper.widget.RotateImageView
+        android:id="@+id/progress_small_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_loding_point_red" />
+
+    <TextView
+        android:id="@+id/tv_loading_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="加载中..."
+        android:textColor="@color/tab_indicator_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

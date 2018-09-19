@@ -1,0 +1,75 @@
+<resources>
+    <!--<string name="app_name">全屏透明壁纸</string>-->
+
+    <string name="fragment_dynamatic_wallpaper">动态壁纸</string>
+    <string name="fragment_static_wallpaper">静态壁纸</string>
+    <string name="fragment_recommend">推荐</string>
+    <string name="fragment_text_wallpaper">文字壁纸</string>
+    <string name="activity_offers_wall">获取更多积分</string>
+    <string name="activity_offers_now">当前积分%s</string>
+    <string name="fragment_edit_hint">输入想要显示的内容</string>
+
+    <string name="dialog_pic_title">需要%s积分才可以使用相册</string>
+    <string name="dialog_pic_des">如果积分不够的话可以点击赚取积分前去获取\n也可以加群找群主开通使用相册的功能</string>
+    <string name="dialog_pic_join_qq">加入qq群</string>
+    <string name="dialog_pic_earn_coin">赚取积分</string>
+    <string name="dialog_pic_delete_coin">扣除%s积分</string>
+    <string name="dialog_pic_no_coin">积分不够,可以点击主页的->获取更多积分</string>
+
+    <string name="net_break_text">数据加载失败，请检查网络设置</string>
+    <string name="net_break_tip">没有网络，请检查网络设置</string>
+    <string name="dockbar_null_intent">数据错误！</string>
+    <string name="activity_not_found" msgid="3571057450431950427">手机上未安装程序</string>
+
+
+    <string name="view_video_path_error" >视频路径有问题，请检查文件是否存在</string >
+    <string name="view_video_bitmap_error" >图片有问题</string >
+    <string name="goto_set" >去设置</string >
+    <string name="cancle" >取消</string >
+    <string name="dialog_require_power" >请求权限</string >
+    <string name="dialog_require_power_tip" >开启全屏透明壁纸需要请求悬浮窗权限 \n
+    1.点击去设置\n
+    2.找到全屏透明壁纸\n
+    3.点击进入，找到悬浮窗,设置为允许\n</string >
+    <string name="activity_phone_adapter" >各个机型的适配(用户自己在手机上查找到位置然后开启)\n使用之前必须了解的知识\n
+-- 1.使用被软件，一定更要给与本软件--悬浮窗权限--不然无法正常使用\n
+   2.本软件一定要在后台一直运行，经测试软件耗电量不到qq的十分之一\n
+   3.软件经常过一两秒就消失或者过半小时消失，那是因为软件后台被杀死了，请把软件加入白名单来避免被后台清除\n
+   4.壁纸在软件内有效，进入其他软件壁纸就消失的话，那可能是因为没有打开悬浮窗的权限\n
+   \n\n
+ vivo手机设置：\n
+ vivo打开悬浮窗操作：\n
+ 方法1.进入i管家-->软件管理-->悬浮窗管理--全局透明动态壁纸--点击右侧按钮，打开即可\n
+ 方法2，设置--更多设置--权限管理--权限--悬浮窗--全局透明动态壁纸--打开\n
+ 全局效果过一会儿消失解决办法：\n
+  1.上拉手机快捷栏长按一键加速--加速白名单--勾选 全局透明动态壁纸 添加至加速白名单；\n
+  2.计入i管家--省电管理--后台高耗电 中将该透明动态壁纸 软件允许后台高耗电时继续运行\n
+  \n\n
+  oppo手机设置\n
+  oppo打开悬浮窗操作：\n
+  打开手机管家--权限隐私--悬浮窗管理--全局透明动态壁纸--右侧按钮打开即可\n
+  \n\n
+  全局效果过一会儿消失解决(闪退等)：\n
+  手机设置--电池--其他--全局透明动态壁纸--后台冻结等此页面全部选项关闭\n
+  \n\n
+  华为手机设置\n
+  华为手机打开悬浮窗操作：\n
+  打开--手机设置--权限管理--应用--全局透明壁纸--悬浮窗权限打开--另外此页面全部权限允许，尤其是信任此应用一定要打开\n
+  手机管家--电池管理-受保护应用，手动把全局透明动态壁纸应用加入到此列表中，避免被清理\n
+  全局效果过一会儿消失(闪退)解决办法：\n
+  手机管家-- 电池管理-- 受保护应用，手动把全局透明壁纸应用加入到此列表，避免被清理。\n
+  \n\n
+  小米手机设置\n
+  1.安全中心-省电优化，将全局透明动态壁纸的后台配置设置为无限制\n
+  2.设置--电量和性能--神隐模式中，配置为后台无限制，场景配置，关闭睡眠模式\n
+  \n\n
+  魅族手机设置：\n
+  安全中心--权限管理--后台管理，将本应用添加到允许后台运行列表中\n
+
+  三星手机设置\n\n
+  1.智能管理器--应用程序管理--管理自动运行--开启全局透明动态壁纸的自动运行权限\n
+  2.设置--电池--应用程序省电--禁用省电\n
+  \n\n
+  其他手机都有类似的管理中心，找到它，不懂可以百度一下也可以加群问群主 。</string >
+
+</resources>

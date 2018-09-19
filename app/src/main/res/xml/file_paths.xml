@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()目录-->
+    <external-path name="hm_DCIM" path="" />
+    <!--storage/emulated/0/Android/data/XXXX/files 目录-->
+    <external-files-path name="hm_DCIM" path="" />
+
+    <cache-path
+        name="apk1"
+        path="" />
+
+</paths>

@@ -1,0 +1,1 @@
+include ':app', ':photopicker',":ColorPalette",":lib-exoplayer-core"

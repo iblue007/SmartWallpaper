@@ -1,0 +1,77 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Dialog_No_Anim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="VideoPaper" />
+    <style name="VideoPaper.Tab">
+        <item name="android:textSize">16sp</item>
+        <!--<item name="android:textStyle">bold</item>-->
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="VideoPaper.Toobar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="layout_collapseMode">pin</item>
+        <item name="contentInsetStartWithNavigation">12dp</item>
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决空白部分-->
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+        <item name="titleTextColor">@color/common_title_dark</item>
+        <item name="statusBarScrim">@android:color/transparent</item>
+        <item name="contentScrim">@color/colorPrimary</item>
+    </style>
+
+    <style name="VideoPaper.Toobar.TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="VideoPaper.Split" />
+
+    <style name="VideoPaper.Split.Line">
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/list_item_pressed_color</item>
+    </style>
+
+    <style name="VideoPaper.Split.Line.Title">
+        <item name="android:layout_height">2px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/divide_line_color</item>
+    </style>
+
+    <style name="VideoPaper.Widget" />
+
+    <style name="VideoPaper.Widget.DurationFootnote">
+        <item name="android:background">@drawable/bg_duration</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+</resources>

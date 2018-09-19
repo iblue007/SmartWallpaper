@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#Ffffff</color>
+    <color name="black">#000000</color>
+    <color name="list_item_pressed_color">#f2f2f2</color>
+    <color name="tab_indicator_color">#fa3a5d</color>
+    <color name="tab_gray">#ccc</color>
+    <color name="common_toast_background">#cf000000</color>
+    <color name="common_title_dark">#282828</color>
+    <color name="contentColorPrimary">#1e1d25</color>
+    <color name="contentColorPrimaryDark">#131216</color>
+    <color name="contentColorAccent">#282828</color>
+    <color name="contentTextColorPrimary">@color/common_title_light</color>
+    <color name="contentTextColorSecondary">@color/common_title_tone</color>
+    <color name="common_title_tone">@color/white</color>
+    <color name="common_title_light">#7fffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="divide_line_color">#eeeeee</color>
+
+</resources>

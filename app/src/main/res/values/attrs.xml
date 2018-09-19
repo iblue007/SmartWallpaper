@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AutosizeTexture">
+        <attr name="resize_mode" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ScaleImageView">
+        <attr name="direction" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="ratio" format="float|reference" />
+    </declare-styleable>
+
+</resources>

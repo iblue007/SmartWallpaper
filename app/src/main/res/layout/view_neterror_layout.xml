@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_neterror_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/iv_error_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_nothing" />
+
+    <TextView
+        android:id="@+id/tv_error_cause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:text="@string/net_break_text"
+        android:textColor="#b2b2b2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_error_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="出错码："
+        android:textColor="#b2b2b2"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btn_reload"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_download_progress"
+        android:stateListAnimator="@null"
+        android:text="重新加载"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

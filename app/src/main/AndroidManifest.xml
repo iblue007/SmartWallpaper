@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xxm.smartwallpaper">
+
+    <!--<uses-sdk-->
+        <!--android:minSdkVersion="14"-->
+        <!--android:targetSdkVersion="25" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+
+    <uses-sdk tools:overrideLibrary="YoumiSdk_v8.2.1_2018-07-11.aar" />
+    <application
+        android:name=".ui.SmartApplication"
+        android:resizeableActivity="false"
+        android:icon="${app_icon}"
+        tools:replace="android:icon,android:allowBackup"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:allowBackup="false"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.SpecialActivity" />
+        <activity android:name=".ui.PhoneAdapterActivity" />
+        <activity android:name=".ui.GalleryImageActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <!--<activity android:name=".ui.TestActivity" />-->
+
+        <service android:name=".service.WindowService">
+            <!--<intent-filter android:priority="1000">-->
+                <!--<action android:name="com.jian.wallpaper" />-->
+                <!--<category android:name="com.jian.wallpaper" />-->
+            <!--</intent-filter>-->
+        </service>
+
+        <service
+            android:name=".widget.lowversion.VideoPlayerService"
+            android:enabled="true"
+            />
+
+        <!-- 有米SDK为了兼容Android N应用间共享文件行为变更而需要配置的FileProvider-->
+        <!-- 这里主要为授予有米SDK拥有打开apk安装界面的功能 -->
+        <!-- 请务必修改 android:authorities 为贵应用的标识，一般为 包名.fileProvider -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+        <!--相机使用-->
+        <provider
+            android:name="com.xxm.smartwallpaper.widget.CameraFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="com.youmi.android.offerdemo.fileProvider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true" >-->
+
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_provider" />-->
+        <!--</provider >-->
+
+        <meta-data android:value="5b8e684a8f4a9d191a000334" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="yingyongbao" android:name="UMENG_CHANNEL"/>
+
+    </application>
+
+
+</manifest>

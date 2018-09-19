@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    >
+   <LinearLayout
+       android:id="@+id/set_white_wallpaper"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:background="@color/white"
+       android:padding="10dp"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="left"
+           android:textColor="#000"
+           android:textSize="13sp"
+           android:text="设置为白色壁纸" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="left"
+           android:background="@color/white"
+           android:textColor="#999999"
+           android:textSize="13sp"
+           android:text="设置为白色壁纸，透明视频可以更好的显示" />
+
+
+   </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        />
+
+    <LinearLayout
+        android:id="@+id/add_qq_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="@color/white"
+            android:textColor="#000"
+            android:textSize="13sp"
+            android:text="加qq群" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:text="加入群，可以体验最新的功能，可以找作者实现定制视频显示服务" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="@color/white"
+            android:textColor="#000"
+            android:textSize="13sp"
+            android:text="当前版本" />
+
+        <TextView
+            android:id="@+id/activit_version_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:text="v1.0" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        />
+
+</LinearLayout>
