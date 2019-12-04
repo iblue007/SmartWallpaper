@@ -3,6 +3,7 @@ package com.xxm.smartwallpaper.service;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -10,6 +11,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
@@ -39,7 +41,7 @@ public class WindowService extends Service {
     private static final Class<?>[] mStartForegroundSignature = new Class[]{Integer.TYPE, Notification.class};
     private static final Class<?>[] mStopForegroundSignature;
     CreateWindows createWindows = null;
-   // private DataStore dataStore;
+    // private DataStore dataStore;
     private NotificationManager mNM;
     private boolean mReflectFlg = false;
     private Method mSetForeground;
@@ -52,6 +54,8 @@ public class WindowService extends Service {
     public static int TYPE_PIC = 1;
     public static int TYPE_TEXT = 2;
     public static int TYPE_VIDEO = 3;
+    String CHANNEL_ONE_ID = "CHANNEL_ONE_ID";
+    String CHANNEL_ONE_NAME = "CHANNEL_ONE_ID";
 
     static {
         Class[] clsArr = new Class[NOTIFICATION_ID];
@@ -72,8 +76,20 @@ public class WindowService extends Service {
             this.mStartForeground = null;
         }
         try {
+            //进行8.0的判断
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ONE_ID,
+                        CHANNEL_ONE_NAME, NotificationManager.IMPORTANCE_HIGH);
+                notificationChannel.enableLights(true);
+                notificationChannel.setLightColor(Color.RED);
+                notificationChannel.setShowBadge(true);
+                notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
+                NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                manager.createNotificationChannel(notificationChannel);
+            }
+
             this.mSetForeground = getClass().getMethod("setForeground", mSetForegroundSignature);
-            Notification.Builder builder = new Notification.Builder(this);
+            Notification.Builder builder = new Notification.Builder(this).setChannelId(CHANNEL_ONE_ID);
             builder.setContentIntent(PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0));
             builder.setSmallIcon(R.mipmap.logoscreen);
             builder.setTicker("\u5168\u5c40\u900f\u660e\u58c1\u7eb8\u670d\u52a1\u5f00\u542f");
@@ -84,7 +100,7 @@ public class WindowService extends Service {
             this.createWindows = new CreateWindows(this, this.windows);
             //this.dataStore = new DataStore(this);
 
-            IntentFilter intentFilter=new IntentFilter();
+            IntentFilter intentFilter = new IntentFilter();
             intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
             intentFilter.addAction(Intent.ACTION_SCREEN_ON);
             intentFilter.addAction(Intent.ACTION_USER_PRESENT);
@@ -179,11 +195,11 @@ public class WindowService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            if (Intent.ACTION_SCREEN_OFF.equals(action)){
+            if (Intent.ACTION_SCREEN_OFF.equals(action)) {
                 VideoPlayer.getInstance().pause();
-                Log.e("======","======screenoff");
-            }else{
-                Log.e("======","======screenOn");
+                Log.e("======", "======screenoff");
+            } else {
+                Log.e("======", "======screenOn");
                 VideoPlayer.getInstance().restart();
             }
 
