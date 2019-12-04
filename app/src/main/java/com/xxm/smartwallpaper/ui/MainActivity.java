@@ -69,9 +69,9 @@ public class MainActivity extends BaseAcitivity implements View.OnClickListener,
         wallpaperVideoFragment.setTitle(getString(R.string.fragment_dynamatic_wallpaper));
         wallpaperTextFragment = new WallpaperTextFragment();
         wallpaperTextFragment.setTitle(getString(R.string.fragment_text_wallpaper));
+        mFragments.add(wallpaperVideoFragment);
         mFragments.add(wallpaperPicFragment);
         mFragments.add(wallpaperTextFragment);
-        mFragments.add(wallpaperVideoFragment);
         wallpaperPicFragment.setOnViewClicListener(this);
         wallpaperTextFragment.setOnViewClicListener(this);
         wallpaperVideoFragment.setOnViewClicListener(this);

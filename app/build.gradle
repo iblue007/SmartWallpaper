@@ -5,16 +5,16 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         debug {
-            keyAlias 'screenvideoWallPaper'
-            keyPassword 'screenvideoWallPaper'
-            storeFile file('E:/screenvideoWallPaper.jks')
-            storePassword 'screenvideoWallPaper'
+            keyAlias 'xuqunxing'
+            keyPassword 'xuqunxing'
+            storeFile file('D:/sigin/xqx/xuqunxing.jks')
+            storePassword 'xuqunxing'
         }
         release {
-            keyAlias 'screenvideoWallPaper'
-            keyPassword 'screenvideoWallPaper'
-            storeFile file('E:/screenvideoWallPaper.jks')
-            storePassword 'screenvideoWallPaper'
+            keyAlias 'xuqunxing'
+            keyPassword 'xuqunxing'
+            storeFile file('D:/sigin/xqx/xuqunxing.jks')
+            storePassword 'xuqunxing'
         }
     }
     compileSdkVersion 27
@@ -31,17 +31,23 @@ android {
         signingConfig signingConfigs.release
     }
     productFlavors {
-        smartwallpaper{
-        applicationId "com.xxm.smartwallpaper"
-        resValue "string", "app_name", "全屏透明壁纸"
-          manifestPlaceholders = [CHANNEL_VALUE: "waps"
-                                    ,app_icon   : "@mipmap/logosmart"]
+        smartwallpaper {
+            applicationId "com.xxm.smartwallpaper"
+            resValue "string", "app_name", "全屏透明壁纸"
+            manifestPlaceholders = [CHANNEL_VALUE: "waps"
+                                    , app_icon   : "@mipmap/logosmart"]
         }
-        screenwallpaper{
+        screenwallpaper {
             applicationId "com.xxm.videowallpaper"
             resValue "string", "app_name", "全局透明动态壁纸"
             manifestPlaceholders = [CHANNEL_VALUE: "waps"
-                                    ,app_icon   : "@mipmap/logoscreen"]
+                                    , app_icon   : "@mipmap/logoscreen"]
+        }
+        idolwallpaper {
+            applicationId "com.xxm.idolvideowallpaper"
+            resValue "string", "app_name", "爱豆动态壁纸"
+            manifestPlaceholders = [CHANNEL_VALUE: "waps"
+                                    , app_icon   : "@mipmap/idou_logo"]
         }
     }
 
@@ -53,7 +59,7 @@ android {
     }
     //自动追加版本号和版本名称
     android.applicationVariants.all {
-        variant->
+        variant ->
             def fn = variant.flavorName;
             fn = (fn == null || fn.length() < 1) ? "" : "_" + fn;
             def replaceName = "Videopaper" + fn + "_V" + versionName + ".apk"
@@ -65,7 +71,7 @@ android {
                         output.outputFile.parent,
                         output.outputFile.name.replace(output.outputFile.name, replaceName))
             }
-        }
+    }
 }
 
 def releaseTime() {
@@ -73,7 +79,8 @@ def releaseTime() {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
     return sdf.format(current);
 }
-repositories{
+
+repositories {
     flatDir {
         dirs 'libs'
     }
